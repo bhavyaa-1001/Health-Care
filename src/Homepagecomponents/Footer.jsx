@@ -30,7 +30,7 @@ function Footer() {
           <div className="col-md-12 text-center mb-3">
             <div className="social-icons">
               <a
-                href="https://github.com/advay77"
+                href="https://github.com/bhavyaa-1001"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", margin: "0 10px" }}
@@ -38,7 +38,7 @@ function Footer() {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/advay-anand-a89024277/"
+                href="https://www.linkedin.com/in/bhavyaa-1001-/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", margin: "0 10px" }}
@@ -46,7 +46,7 @@ function Footer() {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="https://x.com/AnandAdvay91289" 
+                href="https://x.com/bhavyaa_1001_" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", margin: "0 10px" }}
@@ -54,7 +54,7 @@ function Footer() {
                 <FaTwitter size={24} />
               </a>
               <a
-                href="https://www.instagram.com/advay_anand_7/"
+                href="https://www.instagram.com/bhavyaa_1001_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "white", margin: "0 10px" }}

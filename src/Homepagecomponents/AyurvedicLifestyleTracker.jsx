@@ -13,8 +13,7 @@ function AyurvedicLifestyleTracker() {
     symptoms: ''
   });
 
-// filepath: c:\Hack health\src\Homepagecomponents\AyurvedicLifestyleTracker.jsx
-const apiKey = process.env.REACT_APP_API_KEY;  //Gemini API KEY USED HERE
+const apiKey = import.meta.env.const_apikey;  //Gemini API KEY USED HERE
 
   const [analysis, setAnalysis] = useState(null);
 
@@ -59,10 +58,16 @@ const apiKey = process.env.REACT_APP_API_KEY;  //Gemini API KEY USED HERE
   
       const data = await response.json();
   
-      if (data.candidates && data.candidates.length > 0) {
-        setAnalysis(data.candidates[0].content.parts[0].text);
+      // Validate the response structure
+      if (response.ok && data.candidates && data.candidates.length > 0) {
+        const content = data.candidates[0]?.content?.parts?.[0]?.text;
+        if (content) {
+          setAnalysis(content);
+        } else {
+          setAnalysis("No insights available at the moment. Please try again.");
+        }
       } else {
-        setAnalysis("No insights available at the moment. Please try again.");
+        setAnalysis("Failed to retrieve insights. Please check your input or try again later.");
       }
     } catch (error) {
       console.error('Error:', error);
@@ -70,8 +75,7 @@ const apiKey = process.env.REACT_APP_API_KEY;  //Gemini API KEY USED HERE
     } finally {
       setLoading(false);
     }
-  };
-  
+  }
 
   return (
     <div className="lifestyle-tracker">
