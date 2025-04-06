@@ -7,7 +7,7 @@ const AyurvedicTreatment = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const apiKey = import.meta.env.REACT_APP_API_KEY1; // Use the environment variable
+  const apiKey = import.meta.env.VITE_API_KEY; // Use the environment variable
   const handleSearch = async () => {
     if (!searchQuery.trim()) {
       setError("Please enter a search query.");
