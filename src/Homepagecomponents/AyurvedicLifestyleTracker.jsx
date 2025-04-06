@@ -13,8 +13,8 @@ function AyurvedicLifestyleTracker() {
     symptoms: ''
   });
 
-  const apiKey = 'AIzaSyAC3TovZwqUEW9lrvYuXLBjIiZY2sqXBpE';
-  //Gemini API KEY USED HERE
+// filepath: c:\Hack health\src\Homepagecomponents\AyurvedicLifestyleTracker.jsx
+const apiKey = process.env.REACT_APP_API_KEY;  //Gemini API KEY USED HERE
 
   const [analysis, setAnalysis] = useState(null);
 
